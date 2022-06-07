@@ -1,0 +1,14 @@
+// Version tablette
+@import "../../utils/variables";
+@import "../../utils/mixins";
+
+// Code correspondant au body
+ body
+    {
+        @include breakpoint-tablet;
+        width: 100%;
+        font-family:'$font-Roboto','$font-Shrikhand';
+        margin: 0%;
+        padding: 0%;    
+    }
+        

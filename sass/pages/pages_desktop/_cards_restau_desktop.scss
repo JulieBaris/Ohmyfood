@@ -1,0 +1,98 @@
+// Version ordinateur
+@import "../../utils/variables";
+@import "../../utils/mixins";
+
+//La section 3 comprend un bloc avec un titre et 4 cards composées d'une image, de texte et d'une icône animée.
+#section3 
+{
+    @include breakpoint-desktop;
+    margin-top: 30px;
+    background-color: lighten($background-blocs,4%); 
+    .h2-bold
+        {
+            @include h2-bold_desktop;
+            margin-left: 5%;
+            margin-top: 50px;
+        }
+    .bloc3 
+    {
+        @include bloc-row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .cards_restaurant
+        {
+            @include bloc-cards_desktop;
+            &:hover
+            {
+                box-shadow: 5px 5px 10px darken($background-blocs, 25%);
+            }
+            a, a:hover, a:active, a:focus
+            {
+                width: 100%;
+                @include liens-apparence;
+            }
+            .vignette
+                {
+                    position: relative;
+                    .img_restaurant
+                    {                
+                        width: 100%;
+                        height: 308px;
+                        border-radius: 15px 15px 0px 0px;
+                        object-fit: cover;
+                    }
+                    .Nouveau
+                    {
+                        @include Nouveau_desktop;    
+                    }
+                }
+            .bloc_p
+            {
+                @include bloc-row;
+                position: relative;
+                div
+                {
+                    @include bloc;
+                    margin: 15px 0px 15px 15px;
+                   
+                    .p-nom
+                    {
+                        @include p-nom_desktop;
+                        margin: 0 0 2% 2%;
+                    }
+                    .p-details
+                    {
+                        @include p-details_desktop;
+                        margin: 2% 0 0 2%;
+                    }
+                }
+                i
+                {
+                    position: absolute;
+                    font-size: 26px;
+                    margin-right: -10%;
+                    .far.fa-heart
+                    {
+                        opacity: 1;
+                        &:hover
+                        {
+                            @include trans_coeur_disp;
+                        }
+                    }
+                    .fas.fa-heart
+                    {
+                        @include couleur-degradee;
+                        opacity : 0;
+                        &:hover
+                        {
+                            @include trans_coeur;
+                        }                        
+                    }
+                }             
+            }
+        }
+
+    }
+
+   
+}     

@@ -1,0 +1,12 @@
+body {
+  font-family: "$font-Roboto", "$font-Shrikhand";
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+@media screen and (min-width: 769px) {
+  body {
+    width: 100%;
+    height: auto;
+  }
+}

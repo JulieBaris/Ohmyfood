@@ -1,0 +1,41 @@
+// Version tablette 
+@import "../../utils/variables";
+@import "../../utils/mixins";
+//Titre de la page menu
+.bloc_Titre
+{
+    @include breakpoint-tablet;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    h1
+    {
+        @include h1_tab;
+    }
+    //icône favoris
+    i
+    {
+        position: absolute;
+        font-size: 25px;
+        top: 3%;
+        right: 12%;
+        cursor: pointer;
+        &.far
+        {            
+            opacity: 1;
+            &:hover
+            {
+                @include trans_coeur_disp;
+            }
+        }
+        &.fas
+        {
+            @include couleur-degradee;
+            opacity : 0;
+            &:hover
+            {
+                @include trans_coeur;
+            }                        
+        }
+    }
+}

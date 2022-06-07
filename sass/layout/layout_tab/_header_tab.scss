@@ -1,0 +1,33 @@
+/*Version tablette du Header */
+@import "../../utils/variables";
+@import "../../utils/mixins";
+//Ce code correspond au hearder présent sur toutes les pages
+header 
+{
+    @include breakpoint-tablet;    
+   div
+    {
+        @include bloc-center;    
+        img
+        {
+            width: 45%;
+            height: auto;
+            margin: 25px 45px 15px 45px;
+        }
+        a 
+        {   
+            width: 8%;
+            @include liens_fleche_tab;
+            .fa-arrow-left
+            {
+                font-size: 23px;
+                margin-left: 8px ;
+            }
+            &:link &:hover &:active
+            {
+                @include liens-apparence;
+            }
+        } 
+    }
+}
+    

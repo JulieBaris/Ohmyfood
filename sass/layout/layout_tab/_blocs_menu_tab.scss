@@ -1,0 +1,19 @@
+// Version tablette
+@import "../../utils/variables";
+@import "../../utils/mixins";
+
+//Correspond au bloc menu et au bloc sélection
+.bloc_menu
+    { 
+        @include breakpoint-tablet;
+        border-radius: 35px 35px 0px 0px;
+        background-color: $background-blocs;
+        position: relative;
+        justify-content: center;
+    
+    .bloc_selection
+    {
+        @include bloc;
+        flex-wrap: wrap;
+    }
+}

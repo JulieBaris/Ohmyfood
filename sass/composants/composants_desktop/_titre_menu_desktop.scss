@@ -1,0 +1,41 @@
+// Version ordinateur
+@import "../../utils/variables";
+@import "../../utils/mixins";
+//Titre
+.bloc_Titre
+{
+    @include breakpoint-desktop;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    h1
+    {
+        @include h1_desktop;
+    }
+    //icône favoris
+    i
+    {
+        position: absolute;
+        font-size: 30px;
+        margin-right: 5%;
+        margin-top: 3.4%;
+        cursor: pointer;
+        &.far
+        {            
+            opacity: 1;
+            &:hover
+            {
+                @include trans_coeur_disp;
+            }
+        }
+        &.fas
+        {
+            @include couleur-degradee;
+            opacity : 0;
+            &:hover
+            {
+                @include trans_coeur;
+            }                        
+        }
+    }
+}

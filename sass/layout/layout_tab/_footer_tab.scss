@@ -1,0 +1,44 @@
+// Version tablette
+@import "../../utils/variables";
+@import "../../utils/mixins";
+
+// Ce code contient les éléments du footer + un lien vers une adresse mail sur "contact"
+footer
+{
+   @include breakpoint-tablet;
+   display: flex;
+   flex-direction: column;
+   margin-top: 0px;
+   background: lighten($color-black, 20);
+   color:$color-white;
+   h1
+   {
+       @include h1_tab;
+       font-weight: normal;       
+   }
+   ul
+   {
+       list-style: none;
+       padding: 0px;
+       margin-bottom: 40px;        
+   }
+   li
+   {           
+       margin-top: 10px;
+       margin-left: 8%;
+       @include p-petite-tab;
+       color: $color-white;        
+   }
+   i.fa-utensils, i.fa-hands-helping
+   {  
+       color: $color-white;
+       font-size: 0.8em;
+       padding: 0px 10px 0px 0px;
+   }
+   a 
+   {
+       @include liens-apparence;
+       color: $color-white;
+   }
+
+}

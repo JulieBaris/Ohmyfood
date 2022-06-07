@@ -1,0 +1,209 @@
+.h2-normal {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-left: 8%;
+  margin-bottom: 0%;
+  padding: 0%;
+  transform-origin: top;
+  animation: 2000ms linear 1 forwards;
+  -moz-animation: anim-menu 2000ms linear 1 forwards;
+  /* Firefox */
+  -webkit-animation: anim-menu 2000ms linear 1 forwards;
+  /* Safari et Chrome */
+  -o-animation: anim-menu 2000ms linear 1 forwards;
+  /* Opera */
+}
+@keyframes anim-menu {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.trait {
+  color: #99E2D0;
+  margin: 0% 0% 3% 8%;
+  padding: 0%;
+  font-weight: bolder;
+  font-size: 30px;
+  line-height: 0;
+  transform-origin: top;
+  animation: 2000ms linear 1 forwards;
+  -moz-animation: anim-menu 2000ms linear 1 forwards;
+  /* Firefox */
+  -webkit-animation: anim-menu 2000ms linear 1 forwards;
+  /* Safari et Chrome */
+  -o-animation: anim-menu 2000ms linear 1 forwards;
+  /* Opera */
+}
+@keyframes anim-menu {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.entrees, .plats, .desserts {
+  flex-direction: column;
+  width: 85%;
+  height: auto;
+  margin: 10px auto 10px auto;
+  align-items: center;
+  justify-content: center;
+  transform-origin: top;
+  animation: 2000ms linear 1 forwards;
+  -moz-animation: anim-menu 2000ms linear 1 forwards;
+  /* Firefox */
+  -webkit-animation: anim-menu 2000ms linear 1 forwards;
+  /* Safari et Chrome */
+  -o-animation: anim-menu 2000ms linear 1 forwards;
+  /* Opera */
+}
+@keyframes anim-menu {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+.entrees .bouton_select, .plats .bouton_select, .desserts .bouton_select {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 30px auto 30px auto;
+  border-radius: 15px;
+  border-style: none;
+  text-align: left;
+  padding: 0%;
+  background-color: white;
+  box-shadow: 5px 5px 10px #d1d1d1;
+}
+.entrees .bouton_select div:first-child, .plats .bouton_select div:first-child, .desserts .bouton_select div:first-child {
+  flex-direction: column;
+  padding: 0px;
+  width: 82%;
+}
+.entrees .bouton_select div:first-child .p-plats, .plats .bouton_select div:first-child .p-plats, .desserts .bouton_select div:first-child .p-plats {
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: bold;
+  padding: 15px 0px 0px 10px;
+  margin: 0%;
+}
+.entrees .bouton_select div:first-child .p-garniture, .plats .bouton_select div:first-child .p-garniture, .desserts .bouton_select div:first-child .p-garniture {
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: normal;
+  padding: 5px 0px 15px 10px;
+  margin: 0%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.entrees .bouton_select div:last-child, .plats .bouton_select div:last-child, .desserts .bouton_select div:last-child {
+  display: flex;
+  position: absolute;
+  right: 0%;
+}
+.entrees .bouton_select div:last-child .prix, .plats .bouton_select div:last-child .prix, .desserts .bouton_select div:last-child .prix {
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: normal;
+  font-weight: bold;
+  margin: 38px 20px 0px 20px;
+}
+.entrees .bouton_select div:last-child .anim_check, .plats .bouton_select div:last-child .anim_check, .desserts .bouton_select div:last-child .anim_check {
+  display: flex;
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 0px;
+  background: #99E2D0;
+  border-radius: 0px 15px 15px 0px;
+}
+.entrees .bouton_select div:last-child .anim_check i.fas.fa-check-circle, .plats .bouton_select div:last-child .anim_check i.fas.fa-check-circle, .desserts .bouton_select div:last-child .anim_check i.fas.fa-check-circle {
+  position: relative;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+}
+.entrees .bouton_select:hover div:first-child, .plats .bouton_select:hover div:first-child, .desserts .bouton_select:hover div:first-child {
+  width: 62%;
+  white-space: nowrap;
+}
+.entrees .bouton_select:hover div:first-child .p-plats, .entrees .bouton_select:hover div:first-child .p-garniture, .plats .bouton_select:hover div:first-child .p-plats, .plats .bouton_select:hover div:first-child .p-garniture, .desserts .bouton_select:hover div:first-child .p-plats, .desserts .bouton_select:hover div:first-child .p-garniture {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: none;
+}
+.entrees .bouton_select:hover div:last-child, .plats .bouton_select:hover div:last-child, .desserts .bouton_select:hover div:last-child {
+  cursor: pointer;
+}
+.entrees .bouton_select:hover div:last-child .prix, .plats .bouton_select:hover div:last-child .prix, .desserts .bouton_select:hover div:last-child .prix {
+  transform: translateX(-60px);
+}
+.entrees .bouton_select:hover div:last-child.anim_check, .plats .bouton_select:hover div:last-child.anim_check, .desserts .bouton_select:hover div:last-child.anim_check {
+  transition-property: width, height, opacity, transform;
+  transition-timing-function: linear;
+  transition-duration: 500ms;
+  transform: scaleX(1);
+  width: 65px;
+  height: 70px;
+}
+.entrees .bouton_select:hover div:last-child.anim_check i.fas.fa-check-circle, .plats .bouton_select:hover div:last-child.anim_check i.fas.fa-check-circle, .desserts .bouton_select:hover div:last-child.anim_check i.fas.fa-check-circle {
+  animation: 500ms linear 1 forwards;
+  -webkit-animation: check_rotate 500ms linear 1 forwards;
+  -o-animation: check_rotate 500ms linear 1 forwards;
+  -moz-animation: check_rotate 500ms linear 1 forwards;
+}
+@keyframes check_rotate {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.commander {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  width: 180px;
+  background: linear-gradient(#9356DC, #FF79DA);
+  color: white;
+  border-style: none;
+  border-radius: 40px;
+  margin: 20px auto 50px auto;
+  padding: 15px;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: bold;
+}
+.commander:hover {
+  opacity: 0.8;
+}

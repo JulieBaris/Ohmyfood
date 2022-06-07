@@ -1,0 +1,17 @@
+// Version tablette
+@import "../../utils/variables";
+@import "../../utils/mixins";
+// Ce code contient les valeurs attribuées à l'image présente sur chaque page menu.
+section.menu_photo
+{
+    @include breakpoint-tablet;
+    width: 100%;
+
+    .photo_restau
+    {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        margin-bottom: -12%;
+    }
+}

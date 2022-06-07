@@ -1,0 +1,18 @@
+// Version mobile
+@import "../utils/_variables.scss";
+@import "../utils/_mixins.scss";
+// Ce fichier correspond au dimension du bloc_menu présent sur chaque page menu.
+.bloc_menu
+    { 
+        @include mobile;
+        border-radius: 35px 35px 0px 0px;
+        background-color: $background-blocs;
+        position: relative;
+        justify-content: center;
+    
+    .bloc_selection
+    {
+        @include bloc;
+        justify-content: center;
+    }
+}

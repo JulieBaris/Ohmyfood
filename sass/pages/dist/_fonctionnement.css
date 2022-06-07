@@ -1,0 +1,69 @@
+#section2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  font-family: "Roboto";
+}
+@media screen and (max-width: 480px) {
+  #section2 {
+    width: 100%;
+    height: auto;
+  }
+}
+#section2 .h2-bold {
+  font-family: "Roboto";
+  font-size: 2em;
+  font-weight: bold;
+  margin-left: 40px;
+  margin-top: 40px;
+}
+#section2 .fonctionnement {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  font-family: "Roboto";
+  width: 273px;
+  margin: 20px auto 20px auto;
+  background-color: #f4f4f4;
+  box-shadow: 5px 5px 10px #d8d8d8;
+  border-radius: 20px;
+  font-family: "Roboto";
+  font-size: 1.2em;
+  font-weight: normal;
+}
+#section2 .fonctionnement:hover {
+  box-shadow: 5px 5px 10px #c4c4c4;
+  background-color: #f5edff;
+  cursor: pointer;
+}
+#section2 .fonctionnement:hover i {
+  color: #9356DC;
+}
+#section2 .fonctionnement p:first-child {
+  font-family: "Roboto";
+  font-size: 1.2em;
+  font-weight: bold;
+  color: black;
+  color: white;
+  background-color: #9356DC;
+  padding: 5px 10px 5px 10px;
+  border-radius: 100px;
+  margin: 10px 10px 10px -5px;
+}
+#section2 .fonctionnement i {
+  font-size: 1.3em;
+  color: #9e9e9e;
+  margin: auto 10px auto 10px;
+}
+#section2 .fonctionnement p:last-child {
+  font-family: "Roboto";
+  font-size: 1.2em;
+  font-weight: bold;
+  color: black;
+  font-weight: bold;
+  margin: 25px auto 25px 10px;
+}

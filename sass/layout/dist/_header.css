@@ -1,0 +1,40 @@
+@media screen and (max-width: 480px) {
+  header {
+    width: 100%;
+    height: auto;
+  }
+}
+header div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+header div img {
+  width: 55%;
+  height: auto;
+  margin: 20px 45px 20px 45px;
+}
+header div a {
+  width: 10%;
+  text-decoration: none;
+  border-style: none;
+  cursor: pointer;
+  color: black;
+  padding: 0%;
+  margin: 0%;
+  position: absolute;
+  left: 30px;
+}
+header div a .fa-arrow-left {
+  font-size: 1.1em;
+}
+header div a:link header div a:hover header div a:active {
+  text-decoration: none;
+  border-style: none;
+  cursor: pointer;
+  color: black;
+  padding: 0%;
+  margin: 0%;
+}

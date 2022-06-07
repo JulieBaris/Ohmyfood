@@ -1,0 +1,58 @@
+//Version tablette
+@import "../../utils/variables";
+@import "../../utils/mixins";
+// Ce code correspond à la section 2 de l'Index =
+// trois boutons dont les éléments et le background changent de couleurs au survol
+#section2 
+{
+    @include breakpoint-tablet;
+    .h2-bold
+    {
+        @include h2-bold_tab;
+        margin-left: 60px;
+        margin-top: 50px;
+    }
+    > div:last-child
+    {
+        @include bloc;
+    }
+    .fonctionnement
+    {
+        @include bloc-row;
+        width: 380px;
+        margin: 30px auto;
+        background-color: lighten($background-blocs,4%); 
+        box-shadow: 10px 10px 15px darken($background-blocs, 7%);
+        border-radius: 20px;
+        &:hover
+        {
+            box-shadow: 5px 5px 10px darken($background-blocs, 15%);
+            background-color: $btn-etape;
+            cursor: pointer;
+            & i
+            {
+                color: $couleur-primaire;
+            }
+        }
+        p:first-child
+        {
+            @include p-petite_tab;
+            color:white;
+            background-color:$couleur-primaire;
+            padding: 8px 13px 8px 13px;
+            border-radius: 100px;
+            margin : 10px 10px 10px -15px;
+        }
+        i
+        {
+            font-size: 1.6em;
+            color: darken($background-blocs, 30%);
+            margin: auto 25px auto 25px;
+        }
+        p:last-child
+        {
+            @include p-petite_tab;
+            margin: 25px auto 25px 10px; 
+        }
+    }
+}

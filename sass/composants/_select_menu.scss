@@ -1,0 +1,124 @@
+// ce fichier correspond aux boutons permettant de sélectionner l'entrée/plat/dessert de son choix. 
+//Présents sur toutes les pages menus.
+// Version mobile
+@import "../utils/_variables.scss";
+@import "../utils/_mixins.scss";
+// Faire son choix de menu:
+//Ici tous les éléments présents dans le bloc_menu et le bloc_selection (_blocs_menu.scss) qui sont sur chaque page menu.
+
+.h2-normal
+{   
+    @include h2-normal;
+    text-transform: uppercase;
+    margin-left: 8%;
+    margin-bottom: 0%;
+    padding: 0%;
+    @include anim-menu;      
+}
+.trait
+{
+    color: $couleur-tertiaire;
+    margin: 0% 0% 3% 8%;
+    padding: 0%;
+    font-weight: bolder;
+    font-size: 30px;
+    line-height: 0;
+    @include anim-menu;
+}
+.entrees, .plats, .desserts
+{
+    @include bloc-btn;
+    @include anim-menu; 
+    .bouton_select
+    {
+        @include btn;   
+        div:first-child
+        {
+            flex-direction: column;
+            padding: 0px;               
+            width: 82%; 
+            .p-plats
+            {
+                @include p-nom;
+                padding: 15px 0px 0px 10px;
+                margin: 0%;                   
+            }
+            .p-garniture
+            {                
+                @include p-details;
+                padding: 5px 0px 15px 10px;
+                margin: 0%;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+        }
+        div:last-child
+        {             
+            display: flex;
+            position: absolute;
+            right: 0%;
+            .prix
+            {
+                @include p-details;
+                font-weight: bold;
+                margin: 38px 20px 0px 20px;         
+            }
+            .anim_check
+            {
+                @include div_icone_check;
+                i.fas.fa-check-circle
+                {
+                    position: relative;
+                    opacity: 0;
+                    color: $color-white;
+                    font-size: 20px;
+                }
+            }
+            
+        }
+        &:hover
+        {   div:first-child
+            {
+                width: 62%;
+                white-space: nowrap;                                          
+                & .p-plats, & .p-garniture
+                {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    word-break: none;                                                  
+                }
+            }
+            div:last-child
+            {                 
+                .prix
+                {
+                    transform: translateX(-60px)
+                }
+                cursor: pointer;
+                &.anim_check
+                {
+                    @include transition_pastille;
+                    i.fas.fa-check-circle
+                    {
+                        @include anim_rotate_check;
+                    }
+                }
+            }
+        }
+    }
+}
+.commander
+{    
+    @include bloc-center;
+    width: 180px;
+    @include btn-degrade;
+    @include p-nom;
+}
+      
+    
+
+    
+            
+           
+

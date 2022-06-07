@@ -1,0 +1,68 @@
+// Version ordinateur
+@import "../../utils/variables";
+@import "../../utils/mixins";
+// Le code contient la première section de l'index : la possibilité de faire une recherche de restaurant en fonction de sa ville.
+// formulaire, court texte de présentation et bouton de recherche suivant sa localisation.
+
+#section1 
+{
+    @include breakpoint-desktop;
+    @include bloc;
+    form 
+    {        
+        .bloc1
+        {
+            @include bloc-center;
+            background: $background-blocs;
+            box-shadow: 0px 20px 20px -20px darken($background-blocs,40%) inset;
+            .fa-map-marker-alt
+            {
+                font-size: 23px;
+                opacity: 0.6;
+                margin-right: 10px;
+            }
+            input
+            {                
+                @include input_desktop;
+                width: 255px;
+                margin: 20px 10px 20px 10px;
+                &::placeholder, &:hover, &:valid, &:active
+                {
+                    @include input_desktop;
+                    opacity: 0.8;
+                }
+            }
+        }
+        .bloc2
+        {
+            @include bloc-center;
+            flex-direction: column;
+            text-align: center;
+            background: lighten($background-blocs,4%);            
+            margin-top: 0px;        
+            .h2-bold
+            {
+                @include h2-bold_desktop;
+                margin: 40px 0px 20px 0px;
+                width: 90%;
+            }
+            p
+            {
+                @include p-nom_desktop;
+                font-weight: normal;
+                color: lighten($color-black, 50%);
+                margin: 10px 0px 10px 0px;
+                width: 90%;
+            }
+            .input-envoi
+            {
+                width: 350px;
+                @include p-nom_desktop;
+                @include btn-degrade_desktop;
+            }
+        }
+    }
+}
+
+
+        

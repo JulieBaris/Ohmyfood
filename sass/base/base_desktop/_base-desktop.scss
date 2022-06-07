@@ -1,0 +1,14 @@
+// Version ordinateur
+@import "../../utils/variables";
+@import "../../utils/mixins";
+
+// Code correspondant au body
+ body
+    {
+        @include breakpoint-desktop;
+        font-family:'$font-Roboto','$font-Shrikhand';
+        width: 100%;
+        margin: 0%;
+        padding: 0%;    
+    }
+        

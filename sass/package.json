@@ -1,0 +1,13 @@
+{
+  "name": "sass",
+  "version": "1.0.0",
+  "description": "\"projet3\"",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass ./main.scss:./CSS/main.css ./main_tab.scss:./CSS/main_tab.css ./main_desktop.scss:./CSS/main_desktop.css -w --style compressed",
+  "prefix": "postcss ./CSS/main.css ./CSS/main_tab.css main_desktop.css --use autoprefixer -d ./CSS/"
+  },
+  "author": "BarisJulie",
+  "license": "ISC",
+  "browserslist": "last 4 versions"
+}

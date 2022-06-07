@@ -1,0 +1,790 @@
+body {
+  width: 100%;
+  font-family: "$font-Roboto", "$font-Shrikhand";
+  margin: 0%;
+  padding: 0%;
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  body {
+    width: 100%;
+    height: auto;
+  }
+}
+
+section.menu_photo {
+  width: 100%;
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  section.menu_photo {
+    width: 100%;
+    height: auto;
+  }
+}
+section.menu_photo .photo_restau {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: -12%;
+}
+
+.bloc_Titre {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .bloc_Titre {
+    width: 100%;
+    height: auto;
+  }
+}
+.bloc_Titre h1 {
+  font-family: "Shrikhand";
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 8%;
+  margin-top: 6%;
+}
+.bloc_Titre i {
+  position: absolute;
+  font-size: 25px;
+  top: 3%;
+  right: 12%;
+  cursor: pointer;
+}
+.bloc_Titre i.far {
+  opacity: 1;
+}
+.bloc_Titre i.far:hover {
+  transition-property: opacity, transform;
+  transition-timing-function: linear;
+  transition-duration: 0.2s;
+  opacity: 0;
+}
+.bloc_Titre i.fas {
+  color: transparent;
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+}
+.bloc_Titre i.fas:hover {
+  transition-property: opacity, transform;
+  transition-timing-function: linear;
+  transition-duration: 0.3s;
+  opacity: 1;
+}
+
+.h2-normal {
+  font-family: "Roboto";
+  font-size: 22px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 5% auto 0% 12%;
+  padding: 0%;
+  transform-origin: top;
+  animation: 2000ms linear 1 forwards;
+  -moz-animation: anim-menu 2000ms linear 1 forwards;
+  /* Firefox */
+  -webkit-animation: anim-menu 2000ms linear 1 forwards;
+  /* Safari et Chrome */
+  -o-animation: anim-menu 2000ms linear 1 forwards;
+  /* Opera */
+}
+@keyframes anim-menu {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.trait {
+  color: #99E2D0;
+  margin: 0% 0% 3% 12%;
+  padding: 0%;
+  font-weight: bolder;
+  font-size: 2em;
+  line-height: 0;
+  transform-origin: top;
+  animation: 2000ms linear 1 forwards;
+  -moz-animation: anim-menu 2000ms linear 1 forwards;
+  /* Firefox */
+  -webkit-animation: anim-menu 2000ms linear 1 forwards;
+  /* Safari et Chrome */
+  -o-animation: anim-menu 2000ms linear 1 forwards;
+  /* Opera */
+}
+@keyframes anim-menu {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.entrees, .plats, .desserts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  transform-origin: top;
+  animation: 2000ms linear 1 forwards;
+  -moz-animation: anim-menu 2000ms linear 1 forwards;
+  /* Firefox */
+  -webkit-animation: anim-menu 2000ms linear 1 forwards;
+  /* Safari et Chrome */
+  -o-animation: anim-menu 2000ms linear 1 forwards;
+  /* Opera */
+}
+@keyframes anim-menu {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+.entrees .bouton_select, .plats .bouton_select, .desserts .bouton_select {
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+  position: relative;
+  margin: 20px;
+  border-radius: 15px;
+  border-style: none;
+  text-align: left;
+  padding: 0%;
+  background-color: white;
+  box-shadow: 5px 5px 10px #d1d1d1;
+}
+.entrees .bouton_select div:first-child, .plats .bouton_select div:first-child, .desserts .bouton_select div:first-child {
+  flex-direction: column;
+  padding: 0px;
+  width: 80%;
+}
+.entrees .bouton_select div:first-child .p-plats, .plats .bouton_select div:first-child .p-plats, .desserts .bouton_select div:first-child .p-plats {
+  font-family: "Roboto";
+  font-size: 17px;
+  font-weight: bold;
+  padding: 20px 0px 0px 20px;
+  margin: 0%;
+}
+.entrees .bouton_select div:first-child .p-garniture, .plats .bouton_select div:first-child .p-garniture, .desserts .bouton_select div:first-child .p-garniture {
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: normal;
+  padding: 8px 0px 20px 20px;
+  margin: 0%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.entrees .bouton_select div:last-child, .plats .bouton_select div:last-child, .desserts .bouton_select div:last-child {
+  display: flex;
+  position: absolute;
+  right: 0%;
+}
+.entrees .bouton_select div:last-child .prix, .plats .bouton_select div:last-child .prix, .desserts .bouton_select div:last-child .prix {
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: normal;
+  font-weight: bold;
+  margin: 49px 30px 0px 20px;
+}
+.entrees .bouton_select div:last-child .anim_check, .plats .bouton_select div:last-child .anim_check, .desserts .bouton_select div:last-child .anim_check {
+  display: flex;
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 0px;
+  background: #99E2D0;
+  border-radius: 0px 15px 15px 0px;
+}
+.entrees .bouton_select div:last-child .anim_check i.fas.fa-check-circle, .plats .bouton_select div:last-child .anim_check i.fas.fa-check-circle, .desserts .bouton_select div:last-child .anim_check i.fas.fa-check-circle {
+  position: relative;
+  opacity: 0;
+  color: white;
+  font-size: 22px;
+}
+.entrees .bouton_select:hover div:first-child, .plats .bouton_select:hover div:first-child, .desserts .bouton_select:hover div:first-child {
+  width: 65%;
+  white-space: nowrap;
+}
+.entrees .bouton_select:hover div:first-child .p-plats, .entrees .bouton_select:hover div:first-child .p-garniture, .plats .bouton_select:hover div:first-child .p-plats, .plats .bouton_select:hover div:first-child .p-garniture, .desserts .bouton_select:hover div:first-child .p-plats, .desserts .bouton_select:hover div:first-child .p-garniture {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: none;
+}
+.entrees .bouton_select:hover div:last-child, .plats .bouton_select:hover div:last-child, .desserts .bouton_select:hover div:last-child {
+  cursor: pointer;
+}
+.entrees .bouton_select:hover div:last-child .prix, .plats .bouton_select:hover div:last-child .prix, .desserts .bouton_select:hover div:last-child .prix {
+  transform: translateX(-65px);
+}
+.entrees .bouton_select:hover div:last-child.anim_check, .plats .bouton_select:hover div:last-child.anim_check, .desserts .bouton_select:hover div:last-child.anim_check {
+  transition-property: width, height, origin, transform;
+  transition-timing-function: linear;
+  transition-duration: 500ms;
+  transform-origin: right;
+  transform: scaleX(1);
+  width: 85px;
+  height: 86px;
+}
+.entrees .bouton_select:hover div:last-child.anim_check i.fas.fa-check-circle, .plats .bouton_select:hover div:last-child.anim_check i.fas.fa-check-circle, .desserts .bouton_select:hover div:last-child.anim_check i.fas.fa-check-circle {
+  animation: 500ms linear 1 forwards;
+  -webkit-animation: check_rotate 500ms linear 1 forwards;
+  -o-animation: check_rotate 500ms linear 1 forwards;
+  -moz-animation: check_rotate 500ms linear 1 forwards;
+}
+@keyframes check_rotate {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.commander {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  width: 265px;
+  background: linear-gradient(#9356DC, #FF79DA);
+  color: white;
+  border-style: none;
+  border-radius: 40px;
+  padding: 15px 20px 15px 20px;
+  margin: 20px auto 50px auto;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 17px;
+  font-weight: bold;
+}
+.commander:hover {
+  opacity: 0.8;
+}
+
+/*Version tablette du Header */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  header {
+    width: 100%;
+    height: auto;
+  }
+}
+header div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+header div img {
+  width: 45%;
+  height: auto;
+  margin: 25px 45px 15px 45px;
+}
+header div a {
+  width: 8%;
+  text-decoration: none;
+  border-style: none;
+  cursor: pointer;
+  color: black;
+  padding: 0%;
+  margin: 0%;
+  position: absolute;
+  left: 30px;
+}
+header div a .fa-arrow-left {
+  font-size: 23px;
+  margin-left: 8px;
+}
+header div a:link header div a:hover header div a:active {
+  text-decoration: none;
+  border-style: none;
+  cursor: pointer;
+  color: black;
+  padding: 0%;
+  margin: 0%;
+}
+
+.bloc_menu {
+  border-radius: 35px 35px 0px 0px;
+  background-color: #eaeaea;
+  position: relative;
+  justify-content: center;
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .bloc_menu {
+    width: 100%;
+    height: auto;
+  }
+}
+.bloc_menu .bloc_selection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  font-family: "Roboto";
+  flex-wrap: wrap;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+  background: #333333;
+  color: white;
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  footer {
+    width: 100%;
+    height: auto;
+  }
+}
+footer h1 {
+  font-family: "Shrikhand";
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 8%;
+  margin-top: 6%;
+  font-weight: normal;
+}
+footer ul {
+  list-style: none;
+  padding: 0px;
+  margin-bottom: 40px;
+}
+footer li {
+  margin-top: 10px;
+  margin-left: 8%;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  color: white;
+}
+footer i.fa-utensils, footer i.fa-hands-helping {
+  color: white;
+  font-size: 0.8em;
+  padding: 0px 10px 0px 0px;
+}
+footer a {
+  text-decoration: none;
+  border-style: none;
+  cursor: pointer;
+  color: black;
+  padding: 0%;
+  margin: 0%;
+  color: white;
+}
+
+#section1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  font-family: "Roboto";
+  margin-top: 10px;
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  #section1 {
+    width: 100%;
+    height: auto;
+  }
+}
+#section1 form .bloc1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background: #eaeaea;
+  box-shadow: 0px 20px 20px -20px #848484 inset;
+}
+#section1 form .bloc1 .fa-map-marker-alt {
+  font-size: 1.3em;
+  opacity: 0.6;
+  margin-right: 10px;
+}
+#section1 form .bloc1 input {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+  background: #eaeaea;
+  padding: 0px;
+  border-style: none;
+  width: 185px;
+  margin: 20px 10px 20px 10px;
+}
+#section1 form .bloc1 input::placeholder, #section1 form .bloc1 input:hover, #section1 form .bloc1 input:valid, #section1 form .bloc1 input:active {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+  background: #eaeaea;
+  padding: 0px;
+  border-style: none;
+  opacity: 0.8;
+}
+#section1 form .bloc2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  text-align: center;
+  background: #f4f4f4;
+  margin-top: 0px;
+}
+#section1 form .bloc2 .h2-bold {
+  font-family: "Roboto";
+  font-size: 23px;
+  font-weight: bold;
+  margin: 30px 0px 10px 0px;
+  width: 70%;
+}
+#section1 form .bloc2 p {
+  font-family: "Roboto";
+  font-size: 17px;
+  font-weight: bold;
+  font-weight: normal;
+  color: gray;
+  margin: 10px 0px 10px 0px;
+  width: 90%;
+}
+#section1 form .bloc2 .input-envoi {
+  width: 285px;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  background: linear-gradient(#9356DC, #FF79DA);
+  color: white;
+  border-style: none;
+  border-radius: 40px;
+  padding: 15px 20px 15px 20px;
+  margin: 20px auto 50px auto;
+  cursor: pointer;
+}
+#section1 form .bloc2 .input-envoi:hover {
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  #section2 {
+    width: 100%;
+    height: auto;
+  }
+}
+#section2 .h2-bold {
+  font-family: "Roboto";
+  font-size: 23px;
+  font-weight: bold;
+  margin-left: 60px;
+  margin-top: 50px;
+}
+#section2 > div:last-child {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  font-family: "Roboto";
+}
+#section2 .fonctionnement {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  font-family: "Roboto";
+  width: 380px;
+  margin: 30px auto;
+  background-color: #f4f4f4;
+  box-shadow: 10px 10px 15px #d8d8d8;
+  border-radius: 20px;
+}
+#section2 .fonctionnement:hover {
+  box-shadow: 5px 5px 10px #c4c4c4;
+  background-color: #f5edff;
+  cursor: pointer;
+}
+#section2 .fonctionnement:hover i {
+  color: #9356DC;
+}
+#section2 .fonctionnement p:first-child {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  color: white;
+  background-color: #9356DC;
+  padding: 8px 13px 8px 13px;
+  border-radius: 100px;
+  margin: 10px 10px 10px -15px;
+}
+#section2 .fonctionnement i {
+  font-size: 1.6em;
+  color: #9e9e9e;
+  margin: auto 25px auto 25px;
+}
+#section2 .fonctionnement p:last-child {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  margin: 25px auto 25px 10px;
+}
+
+#section3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  font-family: "Roboto";
+  margin-top: 30px;
+  background-color: #f4f4f4;
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  #section3 {
+    width: 100%;
+    height: auto;
+  }
+}
+#section3 .h2-bold {
+  font-family: "Roboto";
+  font-size: 23px;
+  font-weight: bold;
+  margin-left: 60px;
+  margin-top: 50px;
+}
+#section3 .bloc3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  font-family: "Roboto";
+}
+#section3 .bloc3 .cards_restaurant {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: auto;
+  margin: 10px auto 30px auto;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px #c4c4c4;
+}
+#section3 .bloc3 .cards_restaurant:hover {
+  box-shadow: 5px 5px 10px #aaaaaa;
+}
+#section3 .bloc3 .cards_restaurant a, #section3 .bloc3 .cards_restaurant a:hover, #section3 .bloc3 .cards_restaurant a:active, #section3 .bloc3 .cards_restaurant a:focus {
+  width: 100%;
+  text-decoration: none;
+  border-style: none;
+  cursor: pointer;
+  color: black;
+  padding: 0%;
+  margin: 0%;
+}
+#section3 .bloc3 .cards_restaurant .vignette {
+  width: 100%;
+}
+#section3 .bloc3 .cards_restaurant .vignette .img_restaurant {
+  width: 100%;
+  height: 200px;
+  border-radius: 15px 15px 0px 0px;
+  object-fit: cover;
+}
+#section3 .bloc3 .cards_restaurant .vignette .Nouveau {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  z-index: 1;
+  position: absolute;
+  right: 14%;
+  background: #99E2D0;
+  color: #278870;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+}
+#section3 .bloc3 .cards_restaurant .bloc_p {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  font-family: "Roboto";
+}
+#section3 .bloc3 .cards_restaurant .bloc_p div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  font-family: "Roboto";
+  width: 85%;
+  margin-left: 15px;
+}
+#section3 .bloc3 .cards_restaurant .bloc_p div .p-nom {
+  font-family: "Roboto";
+  font-size: 17px;
+  font-weight: bold;
+  margin: 10px 0px 0px 5px;
+}
+#section3 .bloc3 .cards_restaurant .bloc_p div .p-details {
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: normal;
+  margin: 5px 0px 10px 5px;
+}
+#section3 .bloc3 .cards_restaurant .bloc_p i {
+  font-size: 25px;
+  position: absolute;
+  right: 15%;
+}
+#section3 .bloc3 .cards_restaurant .bloc_p i.far {
+  opacity: 1;
+}
+#section3 .bloc3 .cards_restaurant .bloc_p i.far:hover {
+  transition-property: opacity, transform;
+  transition-timing-function: linear;
+  transition-duration: 0.2s;
+  opacity: 0;
+}
+#section3 .bloc3 .cards_restaurant .bloc_p i.fas {
+  color: transparent;
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+}
+#section3 .bloc3 .cards_restaurant .bloc_p i.fas:hover {
+  transition-property: opacity, transform;
+  transition-timing-function: linear;
+  transition-duration: 0.3s;
+  opacity: 1;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .spinner {
+    width: 100%;
+    height: auto;
+  }
+}
+.spinner .loading {
+  position: fixed;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  animation: 3000ms linear forwards;
+  -moz-animation: anim-disp 3000ms linear forwards;
+  /* Firefox */
+  -webkit-animation: anim-disp 3000ms linear forwards;
+  /* Safari et Chrome */
+  -o-animation: anim-disp 3000ms linear forwards;
+  /* Opera */
+}
+@keyframes anim-disp {
+  0%, 75% {
+    z-index: 2;
+    opacity: 1;
+    background: #99E2D0;
+    cursor: wait;
+  }
+  100% {
+    z-index: -1;
+    opacity: 0;
+    cursor: initial;
+  }
+}
+.spinner .loading i {
+  position: absolute;
+  top: 20%;
+  left: 37%;
+  font-size: 13em;
+  color: transparent;
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  z-index: 3;
+  -webkit-animation: i-taille 2700ms linear forwards;
+  animation: i-taille 2700ms linear forwards;
+  -webkit-animation: i-rotate 2700ms linear forwards;
+  animation: i-rotate 2700ms linear forwards;
+}
+@-webkit-keyframes i-rotate {
+  100% {
+    opacity: 0;
+    z-index: -1;
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes i-rotate {
+  100% {
+    opacity: 0;
+    z-index: -1;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes i-taille {
+  0%, 100% {
+    opacity: 0;
+    z-index: -1;
+    -webkit-transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes i-taille {
+  0%, 100% {
+    opacity: 0;
+    z-index: -1;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+/*# sourceMappingURL=main_tab.css.map */

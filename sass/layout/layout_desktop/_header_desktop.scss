@@ -1,0 +1,32 @@
+// Version ordinateur
+@import "../../utils/variables";
+@import "../../utils/mixins";
+//Ce code correspond au hearder présent sur toutes les pages
+header 
+{
+    @include breakpoint-desktop;    
+   div
+    {
+        @include bloc-center;    
+        img
+        {
+            width: 50%;
+            height: auto;
+            margin: 45px 45px 35px 45px;
+        }
+        a 
+        {   
+            width: 8%;
+            @include liens_fleche;
+            .fa-arrow-left
+            {
+                font-size: 2em;
+            }
+            &:link &:hover &:active
+            {
+                @include liens-apparence;
+            }
+        } 
+    }
+}
+    

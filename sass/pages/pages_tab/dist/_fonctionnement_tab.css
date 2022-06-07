@@ -1,0 +1,65 @@
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  #section2 {
+    width: 100%;
+    height: auto;
+  }
+}
+#section2 .h2-bold {
+  font-family: "Roboto";
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-left: 60px;
+  margin-top: 50px;
+}
+#section2 > div:last-child {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  font-family: "Roboto";
+}
+#section2 .fonctionnement {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  font-family: "Roboto";
+  width: 380px;
+  margin: 30px auto;
+  background-color: #f4f4f4;
+  box-shadow: 10px 10px 15px #d8d8d8;
+  border-radius: 20px;
+}
+#section2 .fonctionnement:hover {
+  box-shadow: 5px 5px 10px #c4c4c4;
+  background-color: #f5edff;
+  cursor: pointer;
+}
+#section2 .fonctionnement:hover i {
+  color: #9356DC;
+}
+#section2 .fonctionnement p:first-child {
+  font-family: "Roboto";
+  font-size: 1.1em;
+  font-weight: bold;
+  color: black;
+  color: white;
+  background-color: #9356DC;
+  padding: 8px 13px 8px 13px;
+  border-radius: 100px;
+  margin: 10px 10px 10px -15px;
+}
+#section2 .fonctionnement i {
+  font-size: 1.6em;
+  color: #9e9e9e;
+  margin: auto 25px auto 25px;
+}
+#section2 .fonctionnement p:last-child {
+  font-family: "Roboto";
+  font-size: 1.1em;
+  font-weight: bold;
+  color: black;
+  margin: 25px auto 25px 10px;
+}

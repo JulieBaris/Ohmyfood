@@ -1,0 +1,96 @@
+// Version mobile
+@import "../utils/_variables.scss";
+@import "../utils/_mixins.scss";
+
+//La section 3 comprend un bloc avec un titre et 4 cards composées d'une image, de texte et d'une icône animée.
+#section3 
+{
+    @include mobile;
+    @include bloc;
+    margin-top: 30px;
+    background-color: lighten($background-blocs,4%); 
+
+    .h2-bold
+    {
+        @include h2-bold;
+        margin-left: 40px;
+        margin-top: 40px;
+    }
+    .bloc3
+    {
+        @include bloc;
+        .cards_restaurant
+        {
+            @include bloc-cards;
+            &:hover
+            {
+                box-shadow: 5px 5px 10px darken($background-blocs, 25%);
+            }
+            a, a:hover, a:active, a:focus
+            {
+                width: 100%;
+                @include liens-apparence;
+            }
+            .vignette 
+            {
+                width: 100%;
+                .Nouveau
+                {
+                    @include Nouveau;    
+                }
+                .img_restaurant
+                {                
+                    width: 100%;
+                    height: 180px;
+                    border-radius: 15px 15px 0px 0px;
+                    object-fit: cover;
+                }
+            }
+            .bloc_p
+            {
+                @include bloc-row;
+                div
+                {
+                    @include bloc;
+                    width: 75%;
+                    margin-left: 15px;
+                
+                    .p-nom
+                    {
+                        @include p-nom;
+                        margin: 10px 0px 0px 5px;
+                    }
+                    .p-details
+                    {
+                        @include p-details;
+                        margin: 5px 0px 10px 5px;
+                    }
+                }
+                i
+                {
+                    font-size: 25px;
+                    position: absolute;
+                    right: 15%;
+                    &.far
+                    {            
+                        opacity: 1;
+                        &:hover
+                        {
+                            @include trans_coeur_disp;
+                        }
+                    }
+                    &.fas
+                    {
+                        @include couleur-degradee;
+                        opacity : 0;
+                        &:hover
+                        {
+                            @include trans_coeur;
+                        }                        
+                    }
+                }             
+            }
+        }
+
+    }
+}     

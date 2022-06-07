@@ -1,0 +1,39 @@
+// Version mobile
+@import "../utils/_variables.scss";
+@import "../utils/_mixins.scss";
+//Chaque bloc menu est composé d'un titre et d'une icône permettant la sauvegarde en favoris.
+.bloc_Titre
+{
+    @include mobile;
+    display: flex;
+    flex-direction: row;
+    h1
+    {
+        @include h1;
+    }
+    i //icône favoris
+    {
+        position: absolute;
+        font-size: 22px;
+        right: 10%;
+        top: 2%;
+        cursor: pointer;
+        &.far
+        {            
+            opacity: 1;
+            &:hover
+            {
+                @include trans_coeur_disp;
+            }
+        }
+        &.fas
+        {
+            @include couleur-degradee;
+            opacity : 0;
+            &:hover
+            {
+                @include trans_coeur;
+            }                        
+        }
+    }
+}

@@ -1,0 +1,15 @@
+// breakpoint à respecter
+// polices à utiliser
+@import "../utils/_variables.scss";
+@import "../utils/_mixins.scss";
+
+// Code correspondant au body
+ body
+    {
+        @include mobile;
+        width: 100%;
+        font-family:'$font-Roboto','$font-Shrikhand';
+        margin: 0%;
+        padding: 0%;    
+    }
+        

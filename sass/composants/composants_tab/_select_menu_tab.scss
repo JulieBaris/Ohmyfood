@@ -1,0 +1,112 @@
+// Version tablette
+@import "../../utils/variables";
+@import "../../utils/mixins";
+
+// Ce code contient les valeurs attribuées aux composants de sélection présents sur chaque page.
+.h2-normal
+{   
+    @include h2-normal_tab;
+    text-transform: uppercase;
+    margin: 5% auto 0% 12%;
+    padding: 0%;
+    @include anim-menu;      
+}
+.trait
+{
+    color: $couleur-tertiaire;
+    margin: 0% 0% 3% 12%;
+    padding: 0%;
+    font-weight: bolder;
+    font-size: 2em;
+    line-height: 0;
+    @include anim-menu;
+}
+.entrees, .plats, .desserts
+{
+    @include bloc-btn_tab;
+    @include anim-menu; 
+    .bouton_select
+    {
+        @include btn_tab; 
+        div:first-child
+        {
+            flex-direction: column;
+            padding: 0px;               
+            width: 80%;            
+            .p-plats
+            {
+                @include p-nom_tab;
+                padding: 20px 0px 0px 20px;
+                margin: 0%;                   
+            }
+            .p-garniture
+            {                
+                @include p-details_tab;
+                padding: 8px 0px 20px 20px;
+                margin: 0%;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+        }
+        div:last-child
+        {                
+            display: flex;
+            position: absolute;
+            right: 0%;
+            .prix
+            {
+                @include p-details_tab;
+                font-weight: bold;
+                margin: 49px 30px 0px 20px;                     
+            }
+            .anim_check
+            {
+                @include div_icone_check;
+                i.fas.fa-check-circle
+                {
+                    position: relative;
+                    opacity: 0;
+                    color: $color-white;
+                    font-size: 22px;
+                }
+            }
+        }
+        &:hover
+        {   div:first-child
+            {
+                width: 65%;
+                white-space: nowrap;                                          
+                & .p-plats, & .p-garniture
+                {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    word-break: none;                                                  
+                }
+            }
+            div:last-child
+            {                    
+                .prix
+                {
+                    transform: translateX(-65px)
+                }
+                cursor: pointer;
+                &.anim_check
+                {
+                    @include transition_pastille_tab;
+                    i.fas.fa-check-circle
+                    {
+                        @include anim_rotate_check;
+                    }
+                }
+            }
+        }
+    }
+}
+.commander
+{    
+    @include bloc-center;
+    width: 265px;
+    @include btn-degrade_tab;
+    @include p-nom_tab;
+}

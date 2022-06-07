@@ -1,0 +1,57 @@
+@import "../utils/_variables.scss";
+@import "../utils/_mixins.scss";
+
+// Ce code correspond à la section 2 de l'Index =
+// trois boutons dont les éléments et le background changent de couleurs au survol
+#section2 
+{
+    @include mobile;
+    @include bloc;
+    .h2-bold
+    {
+        @include h2-bold;
+        margin-left: 40px;
+        margin-top: 40px;
+    }
+    .fonctionnement
+    {
+        @include bloc-row;
+        width: 73%;
+        margin: 20px auto 40px auto;
+        background-color: lighten($background-blocs,4%); 
+        box-shadow: 5px 5px 10px darken($background-blocs, 7%);
+        border-radius: 20px;
+        @include p-details;
+        &:hover
+        {
+            box-shadow: 5px 5px 10px darken($background-blocs, 15%);
+            background-color: $btn-etape;
+            cursor: pointer;
+            & i
+            {
+                color: $couleur-primaire;
+            }
+        }
+        p:first-child
+        {
+            @include p-petite;
+            color:white;
+            background-color:$couleur-primaire;
+            padding: 5px 10px 5px 10px;
+            border-radius: 100px;
+            margin : 10px 0px 10px -10px;
+        }
+        i
+        {
+            font-size: 20px;
+            color: darken($background-blocs, 30%);
+            margin: auto 15px auto 15px;
+        }
+        p:last-child
+        {
+            @include p-petite;
+            font-weight:bold;
+            margin: 25px 0 25px 5px; 
+        }
+    }
+}

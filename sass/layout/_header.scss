@@ -1,0 +1,32 @@
+// Version mobile
+@import "../utils/_variables.scss";
+@import "../utils/_mixins.scss";
+//Ce code correspond au hearder présent sur toutes les pages
+header 
+{
+    @include mobile;    
+   div
+    {
+        @include bloc-center;    
+        img
+        {
+            width: 55%;
+            height: auto;
+            margin: 20px 45px 20px 45px;
+        }
+        a 
+        {   
+            width: 10%;
+            @include liens_fleche;
+            .fa-arrow-left
+            {
+                font-size: 22px;
+            }
+            &:link &:hover &:active
+            {
+                @include liens-apparence;
+            }
+        } 
+    }
+}
+    
